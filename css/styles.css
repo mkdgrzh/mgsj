@@ -1,0 +1,185 @@
+/* 外部CSS样式 */
+
+/* 切换器区域的CSS样式代码 */
+.switcher {
+  text-align: center;
+  margin: 1cm auto; /* 网页内上下边距为1厘米 */
+}
+
+/* 按钮样式的CSS代码 */
+button {
+  margin: 0 5px; /* 按钮的左右间距 */
+  padding: 5px 10px; /* 按钮内边距 */
+}
+
+/* 侧边栏的代码 */
+.sidebar {
+	text-align: center;
+    height: 100%;
+    width: 0; /* 侧边栏初始      wwwwwwwwww nwm,dk宽度为0 */
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #a90003; /* 可以选择一个浅色的背景 */
+    color: #818181; /* 修改文本颜色以与背景相匹配 */
+    overflow-x: hidden; /* 隐藏水平滚动条 */
+    transition: width 0.5s; /* 使宽度变化有过渡效果 */
+    padding-top: 40px;
+    box-shadow: 3px 0 6px rgba(0,0,0,0.16), 3px 0 6px rgba(0,0,0,0.23); /* 添加水平和垂直阴影 */
+}
+.sidebar a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 22px;
+    color: #ffd145;
+    display: block;
+    transition: 0.3s;
+    white-space: nowrap;
+}
+.sidebar a:hover {
+    color: #f1f1f1;
+}
+ #nav-icon{
+	cursor: pointer;
+    padding: 10px;
+    width: 4%;
+	height: auto;
+}
+
+
+/* ———————————————————————————— */
+/* index.html部分css代码 */
+/* 全局样式 */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+	background: url("../img/index/背景.png") no-repeat center center fixed;
+	background-size: cover;
+	font-size: calc(0.6vw + 0.6vh + 0.6vmin); /* 自适应字体大小 */
+}
+
+#dateContainer {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    }
+
+/* 主内容区域 */
+.main-content {
+    padding: 20px;
+}
+
+img {
+    max-width: 100%; /* 图片响应式 */
+    height: auto;
+}
+
+/* 标题样式 */
+header h1 {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* 画廊样式 */
+#gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.artwork {
+    background-color: #fff;
+    margin: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    padding: 15px;
+    text-align: center;
+}
+
+.artwork h3 {
+    color: #333;
+}
+
+/* 关于 */
+#about {
+    background-color: #ddd;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+/* 页脚 */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+
+table {
+    width: calc(100vw - 4cm); /* 减去左右的2cm边距 */
+    margin: 1cm 2cm; /* 上下1cm, 左右2cm边距 */
+    border-collapse: collapse; /* 合并边框 */
+  }
+th, td {
+    border: 1px solid #000;
+    line-height: 1cm; /* 行高为1cm */
+    text-align: left;
+    padding: 0 0.5cm; /* 单元格内左右填充 */
+  }
+a {
+    text-decoration: none; /* 移除链接下划线 */
+    color: inherit; /* 链接颜色继承自父元素 */
+  }
+  
+/* index主页图片 */
+/* 图片的基础样式 */
+.main-content img {
+    width: 100%;
+    opacity: 0; /* 初始透明度设置为0 */
+    transform: scale(1.2); /* 初始缩放设置为略微放大 */
+    transition: transform 0.5s ease, opacity 0.5s ease; /* 平滑过渡效果 */
+}
+
+/* 图片加载时的淡入和缩放动画 */
+@keyframes fadeInScaleDown {
+    to {
+        opacity: 1; /* 动画结束时透明度为1 */
+        transform: scale(1); /* 动画结束时缩放回正常大小 */
+    }
+}
+
+/* 在图片加载后立即开始动画 */
+.main-content img {
+    animation: fadeInScaleDown 2s ease forwards;
+}
+
+/* 滚动提示的样式 */
+.scroll-prompt {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2; /* 确保提示在最上面 */
+    pointer-events: none;
+    opacity: 0; /* 初始透明度设置为0 */
+    animation: fadeIn 2s 2s ease forwards; /* 2秒后开始淡入 */
+}
+
+/* 关键帧动画，用于提示的淡入效果 */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* 页面滚动后的图片样式 */
+.img-scrolled {
+    transform: scale(0.8) translateY(-50px); /* 缩小并上移图片 */
+    width: 80%; /* 缩小后的宽度 */
+}
+

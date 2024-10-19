@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>反馈报错</title>
+		<link rel="stylesheet" href="../css/fkbc.css"> <!-- 引入外部CSS文件 -->
+	</head>
+	<body>
+		<div id="sidebar" class="sidebar">
+		    <a href="../index.html">首页</a>
+		    <a href="dsgl.html">党史概览</a>
+		    <a href="dsjs.html">党史检索</a>
+			<a href="zg/zgPage1.html">线上展馆</a>
+<a href="zpzs.html">毛概实践</a>
+		    <a href="fkbc.html">反馈报错</a>
+		    <!-- <a href="about.html">关于</a> -->
+		</div>
+		<div id="nav-icon">
+			<img src="../img/index/icon.png" alt="导航按钮" width="100%"/>
+		</div>
+		
+		<h1>反馈报错</h1>
+		<form action="http://localhost:3000/feedback" method="post">
+		    <label for="feedback">请描述具体问题:</label><br>
+		    <textarea id="feedback" name="feedback" rows="10" cols="70" required></textarea><br>
+		    <input type="submit" value="发送报错">
+		</form>
+			
+		<footer>
+			<p>版权信息 &copy; 2024</p>  
+		</footer>  
+			
+			
+		<script src="../js/script.js"></script> <!-- 引入外部JavaScript文件 -->
+		
+	</body>
+</html>

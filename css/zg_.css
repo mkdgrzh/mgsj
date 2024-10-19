@@ -1,0 +1,91 @@
+.hover-image {
+    transition: transform 0.5s ease, box-shadow 0.5s ease; /* 平滑过渡效果，持续时间更长，添加ease缓动函数 */
+    display: block; /* 或者使用 inline-block */
+    margin: 20px;   /* 与其他元素的间距 */
+    border-radius: 4px; /* 轻微的圆角 */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* 初始阴影较小 */
+  }
+
+.hover-image:hover {
+    transform: translateY(-10px) scale(1.05); /* 向上移动图片并且轻微放大 */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4); /* 增加阴影的模糊半径和颜色深度 */
+  }
+  
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+	background: url("../img/index/背景2.png") no-repeat center center fixed;
+	background-size: cover;
+    color: #333;
+    }
+
+.switcher {
+    text-align: center;
+    margin: 20px 0;
+    }
+  
+.switcher button {
+    padding: 10px 20px;
+    margin: 0 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #5c5c5c;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    }
+  
+.switcher button:hover {
+    background-color: #7d7d7d;
+    }
+  
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    }
+  
+th, td {
+    padding: 20px;
+    border: 1px solid #ddd;
+    text-align: left;
+    }
+	
+td.center {
+  text-align: center;
+  font-size: 2em;
+  font-weight: bold;
+  font-family: "行楷", Xingkai, cursive;
+  text-shadow: 2px 2px 4px rgba(79, 79, 79, 0.5);
+}
+  
+caption h1 {
+    margin: 0;
+    text-align: center;
+    color: #333;
+    }
+  
+.hover-image {
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    display: block;
+    max-width: 80%; /* 将图片的最大宽度设置为固定值，并居中。 */
+    margin: 10px auto; /* 居中图片 */
+    border-radius: 4px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+  
+.hover-image:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    }
+  
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+    }
+
+.indent {
+  text-indent: 2em;
+}
